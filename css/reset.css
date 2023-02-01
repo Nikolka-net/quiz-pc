@@ -8,7 +8,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 :focus,
@@ -22,7 +23,6 @@ a:active {
 }
 
 /* Links */
-
 a,
 a:link,
 a:visited {
@@ -37,7 +37,6 @@ a:hover {
 }
 
 /* Common */
-
 aside,
 nav,
 footer,
@@ -78,7 +77,6 @@ address {
 }
 
 /* Form */
-
 input,
 textarea,
 button,
@@ -96,7 +94,8 @@ input::-ms-clear {
 button,
 input[type="submit"] {
   display: inline-block;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   background: none;
   cursor: pointer;
