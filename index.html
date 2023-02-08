@@ -10,430 +10,537 @@
 </head>
 
 <body>
+	<!-- quiz-section -->
 	<div class="quiz-section">
 
 		<!-- Quiz-container -->
 		<div class="quiz-container">
-			<!-- quiz-1-->
-			<div class="quiz-1 quiz">
-				<!-- quiz-header -->
-				<div class="quiz-header">
 
-					<h2 class="quiz-header__title">
-						Ответьте на&nbsp;несколько вопросов, чтобы узнать
-						примерную цену и&nbsp;сроки на&nbsp;сборку, покупку или&nbsp;улучшение
-						компьютера. Получите удалённую диагностику пк в&nbsp;подарок
-					</h2>
+			<!-- Quiz wrapper -->
+			<div class="quiz-wrapper">
+				<!-- quiz-1-->
+				<div class="quiz-1 quiz visible" data-step="1">
+					<!-- quiz-header -->
+					<div class="quiz-header">
 
-					<div class="quiz-header__step">
+						<h2 class="quiz-header__title">
+							Ответьте на&nbsp;несколько вопросов, чтобы узнать
+							примерную цену и&nbsp;сроки на&nbsp;сборку, покупку или&nbsp;улучшение
+							компьютера. Получите удалённую диагностику пк в&nbsp;подарок
+						</h2>
 
-						<div class="step-number">
-							<span class="step-number__first">1</span>
-							<span class="step-number__second">/4</span>
+						<div class="quiz-header__step">
+
+							<div class="step-number">
+								<span class="step-number__first">1</span>
+								<span class="step-number__second">/4</span>
+							</div>
+							<p class="step-text">шаг</p>
+
 						</div>
-						<p class="step-text">шаг</p>
-
 					</div>
-				</div>
-				<!-- /quiz-header -->
+					<!-- /quiz-header -->
 
-				<!-- quiz-main -->
-				<div class="quiz-main">
-					<h3 class="quiz-main__title">Выберите ваш вариант:</h3>
-					<div class="quiz-main-wrapper">
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/assembly.png" alt="Сборка из комплектующих" class="item-content__img">
-								<p class="item-content__text">Сборка пк из&nbsp;комплектующих</p>
+					<!-- quiz-main -->
+					<div class="quiz-main">
+						<h3 class="quiz-main__title">Выберите ваш вариант:</h3>
+						<div class="quiz-main-wrapper">
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/assembly.png" alt="Сборка из комплектующих" class="item-content__img">
+									<p class="item-content__text">Сборка пк из&nbsp;комплектующих</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
 							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/choicepc.png" alt="Выбор компьютера" class="item-content__img">
-								<p class="item-content__text">Выбор нового или&nbsp;б/у пк,
-									ноутбука</p>
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/choicepc.png" alt="Выбор компьютера" class="item-content__img">
+									<p class="item-content__text">Выбор нового или&nbsp;б/у пк,
+										ноутбука</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
 							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/upgrade.png" alt="Улучшение компьютера" class="item-content__img">
-								<p class="item-content__text">Улучшение, модернизация
-									компьютера</p>
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/upgrade.png" alt="Улучшение компьютера" class="item-content__img">
+									<p class="item-content__text">Улучшение, модернизация
+										компьютера</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
 							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
 
-						<button class="next">
-							<img src="./image/icons/next.svg" alt="Следующий">
-						</button>
+							<button class="next">
+								<img src="./image/icons/next.svg" alt="Следующий">
+							</button>
+						</div>
 					</div>
+					<!-- /quiz-main -->
 				</div>
-				<!-- /quiz-main -->
+				<!-- / quiz-1 -->
+
+				<!-- quiz-2ab-->
+				<div class="quiz-2ab quiz" data-step="2ab">
+					<!-- quiz-header -->
+					<div class="quiz-header">
+
+						<h2 class="quiz-header__title quiz-header__title_top">
+							Какой компьютер вам нужен?
+						</h2>
+
+						<div class="quiz-header__step">
+
+							<div class="step-number">
+								<span class="step-number__first">2</span>
+								<span class="step-number__second">/4</span>
+							</div>
+							<p class="step-text">шаг</p>
+
+						</div>
+					</div>
+					<!-- /quiz-header -->
+
+					<!-- quiz-main -->
+					<div class="quiz-main">
+						<div class="quiz-main-wrapper quiz-main-wrapper_top">
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/top.png" alt="Мощный игровой компьютер" class="item-content__img">
+									<p class="item-content__text">Мощный компьютер для&nbsp;игр,
+										работы с&nbsp;3D-графикой</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
+							</div>
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/middle.png" alt="Компьютер средний производительности"
+										class="item-content__img">
+									<p class="item-content__text">Для работы, учёбы,
+										нетребовательных&nbsp;игр</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
+							</div>
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/elementary.png" alt="Компьютер начального уровня" class="item-content__img">
+									<p class="item-content__text">Для сёрфинга в&nbsp;интернете,
+										решения офисных задач</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
+							</div>
+
+							<button class="previous" title="Назад">
+								<img src="./image/icons/previous.svg" alt="Предыдущий">
+							</button>
+							<button class="next" title="Далее">
+								<img src="./image/icons/next.svg" alt="Следующий">
+							</button>
+						</div>
+					</div>
+					<!-- /quiz-main -->
+				</div>
+				<!-- / quiz-2ab-->
+
+				<!-- quiz-2c-->
+				<div class="quiz-2c quiz" data-step="2c">
+					<!-- quiz-header -->
+					<div class="quiz-header">
+
+						<h2 class="quiz-header__title quiz-header__title_top">
+							Что вы хотите улучшить?
+						</h2>
+
+						<div class="quiz-header__step">
+
+							<div class="step-number">
+								<span class="step-number__first">2</span>
+								<span class="step-number__second">/4</span>
+							</div>
+							<p class="step-text">шаг</p>
+
+						</div>
+					</div>
+					<!-- /quiz-header -->
+
+					<!-- quiz-main -->
+					<div class="quiz-main">
+						<div class="quiz-main-wrapper quiz-main-wrapper_top quiz-main-wrapper_justify">
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/pc.png" alt="Персональный компьютер" class="item-content__img">
+									<p class="item-content__text">Стационарный персональный&nbsp;
+										компьютер</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
+							</div>
+							<div class="quiz-main__item">
+								<div class="item-content">
+									<img src="./image/quiz/laptop.png" alt="Ноутбук" class="item-content__img">
+									<p class="item-content__text">Ноутбук</p>
+								</div>
+								<button class="btn-choice">Выбрать</button>
+							</div>
+
+							<button class="previous" title="Назад">
+								<img src="./image/icons/previous.svg" alt="Предыдущий">
+							</button>
+							<button class="next" title="Далее">
+								<img src="./image/icons/next.svg" alt="Следующий">
+							</button>
+						</div>
+					</div>
+					<!-- /quiz-main -->
+				</div>
+				<!-- / quiz-2c-->
+
+				<!-- quiz-3a-->
+				<div class="quiz-3a quiz" data-step="3a">
+
+					<!-- quiz-header -->
+					<div class="quiz-header">
+
+						<h2 class="quiz-header__title quiz-header__title_top">
+							Ваш примерный бюджет на&nbsp;покупку:
+						</h2>
+
+						<div class="quiz-header__step">
+
+							<div class="step-number">
+								<span class="step-number__first">3</span>
+								<span class="step-number__second">/4</span>
+							</div>
+							<p class="step-text">шаг</p>
+
+						</div>
+					</div>
+					<!-- /quiz-header -->
+
+					<!-- quiz-main -->
+					<div class="quiz-main">
+						<div class="main-wrapper">
+
+							<div class="main-item main-item_order">
+
+								<!-- item-list-budget -->
+								<ul class="item-list-budget">
+
+									<li class="budget-row">
+										<span class="budget-row__text">До 30 000 руб.</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+									<li class="budget-row">
+										<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+									<li class="budget-row">
+										<span class="budget-row__text">От 60 000 руб. и более</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+								</ul>
+								<!-- / item-list-budget -->
+
+							</div>
+
+							<div class="main-item">
+
+								<img src="./image/quiz/budget_assembly.png" alt="Сборка из комплектующих" class="main-item__img">
+
+							</div>
+
+							<button class="previous" title="Назад">
+								<img src="./image/icons/previous.svg" alt="Предыдущий">
+							</button>
+							<button class="next" title="Далее">
+								<img src="./image/icons/next.svg" alt="Следующий">
+							</button>
+						</div>
+					</div>
+					<!-- /quiz-main -->
+				</div>
+				<!-- / quiz-3a-->
+
+				<!-- quiz-3b-->
+				<div class="quiz-3b quiz" data-step="3b">
+
+					<!-- quiz-header -->
+					<div class="quiz-header">
+
+						<h2 class="quiz-header__title quiz-header__title_top">
+							Ваш примерный бюджет на&nbsp;покупку:
+						</h2>
+
+						<div class="quiz-header__step">
+
+							<div class="step-number">
+								<span class="step-number__first">3</span>
+								<span class="step-number__second">/4</span>
+							</div>
+							<p class="step-text">шаг</p>
+
+						</div>
+					</div>
+					<!-- /quiz-header -->
+
+					<!-- quiz-main -->
+					<div class="quiz-main">
+						<div class="main-wrapper">
+
+							<div class="main-item main-item_order">
+
+								<!-- item-list-budget -->
+								<ul class="item-list-budget">
+
+									<li class="budget-row">
+										<span class="budget-row__text">До 30 000 руб.</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+									<li class="budget-row">
+										<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+									<li class="budget-row">
+										<span class="budget-row__text">От 60 000 руб. и более</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+								</ul>
+								<!-- / item-list-budget -->
+
+							</div>
+
+							<div class="main-item">
+
+								<img src="./image/quiz/budget_choicepc.png" alt="Выбор компьютера" class="main-item__img">
+
+							</div>
+
+							<button class="previous" title="Назад">
+								<img src="./image/icons/previous.svg" alt="Предыдущий">
+							</button>
+							<button class="next" title="Далее">
+								<img src="./image/icons/next.svg" alt="Следующий">
+							</button>
+						</div>
+					</div>
+					<!-- /quiz-main -->
+				</div>
+				<!-- / quiz-3b-->
+
+				<!-- quiz-3с-->
+				<div class="quiz-3с quiz" data-step="3c">
+
+					<!-- quiz-header -->
+					<div class="quiz-header">
+
+						<h2 class="quiz-header__title quiz-header__title_top">
+							Ваш примерный бюджет на&nbsp;покупку:
+						</h2>
+
+						<div class="quiz-header__step">
+
+							<div class="step-number">
+								<span class="step-number__first">3</span>
+								<span class="step-number__second">/4</span>
+							</div>
+							<p class="step-text">шаг</p>
+
+						</div>
+					</div>
+					<!-- /quiz-header -->
+
+					<!-- quiz-main -->
+					<div class="quiz-main">
+						<div class="main-wrapper">
+
+							<div class="main-item main-item_order">
+
+								<!-- item-list-budget -->
+								<ul class="item-list-budget">
+
+									<li class="budget-row">
+										<span class="budget-row__text">До 5 000 руб.</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+									<li class="budget-row">
+										<span class="budget-row__text">От 8 000 до 20 000 руб.</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+									<li class="budget-row">
+										<span class="budget-row__text">От 25 000 руб. и более</span>
+										<button class="btn-choice budget-row__btn">Выбрать</button>
+									</li>
+								</ul>
+								<!-- / item-list-budget -->
+
+							</div>
+
+							<div class="main-item">
+
+								<img src="./image/quiz/budget_upgrade.png" alt="Улучшение компьютера" class="main-item__img">
+
+							</div>
+
+							<button class="previous" title="Назад">
+								<img src="./image/icons/previous.svg" alt="Предыдущий">
+							</button>
+							<button class="next" title="Далее">
+								<img src="./image/icons/next.svg" alt="Следующий">
+							</button>
+						</div>
+					</div>
+					<!-- /quiz-main -->
+				</div>
+				<!-- / quiz-3с-->
+
+				<!-- quiz-3a-->
+				<div class="quiz-4 quiz" data-step="4">
+
+					<!-- quiz-header -->
+					<div class="quiz-header">
+
+						<h2 class="quiz-header__title quiz-header__title_top">
+							Спасибо! Оставьте ваши контактные данные,
+							чтобы&nbsp;узнать цену и&nbsp;сроки
+						</h2>
+
+						<div class="quiz-header__step">
+
+							<div class="step-number">
+								<span class="step-number__first">4</span>
+								<span class="step-number__second">/4</span>
+							</div>
+							<p class="step-text">шаг</p>
+
+						</div>
+					</div>
+					<!-- /quiz-header -->
+
+					<!-- quiz-main -->
+					<div class="quiz-main">
+						<div class="main-wrapper main-wrapper_row">
+
+							<div class="item-block">
+								<!-- Form -->
+								<form action="#" class="form">
+
+									<fieldset class="fieldset">
+
+										<div class="fieldset__item">
+											<label for="formName" class="form__label">
+												Ваше имя
+											</label>
+											<input type="text" autocomplete="on" name="userName" id="formName" class="form__text _req"
+												placeholder="Иван" maxlength="60">
+										</div>
+
+										<div class="fieldset__item">
+											<label for="formPhone" class="form__label">
+												Телефон для&nbsp;консультации
+											</label>
+											<input type="tel" autocomplete="on" name="phone" id="formPhone" class="form__text _req _phone"
+												placeholder="+7 (___) ___-__-__" maxlength="18">
+										</div>
+
+										<div class="fieldset__item">
+											<label for="formEmail" class="form__label">
+												Ваша почта (необязательно)
+											</label>
+											<input type="email" autocomplete="on" name="email" id="formEmail" class="form__text _email"
+												placeholder="mail@example.com" maxlength="80">
+										</div>
+
+										<button type="submit" class="btn-choice form__button">Узнать цену и&nbsp;сроки</button>
+
+										<div class="fieldset__item">
+											<label for="formAgreement" class="form__label-checkbox">
+												<input type="checkbox" class="form__checkbox real-checkbox _req" id="formAgreement" checked
+													name="agreement">
+												<span class="custom-checkbox agreement"></span>
+												<span>С обработкой
+													<a href="#!" target="_blank" rel="noopener" class="form__link">
+														персональных данных</a>
+													ознакомлен(а)
+												</span>
+											</label>
+										</div>
+
+									</fieldset>
+
+								</form>
+								<!-- / Form -->
+							</div>
+
+
+							<div class="item-block">
+								<!-- Block-present -->
+								<div class="block-present">
+
+									<div class="present-header">
+										<h3 class="present-header__title">При оказании услуги вы&nbsp;получаете&nbsp;подарок:</h3>
+										<img src="./image/quiz/gift.png" alt="Подарок" class="present-header__img">
+									</div>
+
+									<div class="present-main">
+										<h4 class="present-main__title">Бесплатная диагностика компьютера удалённо*</h4>
+										<p class="present-main__text">
+											Для диагностики можно выбрать
+											имеющийся у&nbsp;вас компьютер
+											или&nbsp;тот, который вы планируете купить.
+										</p>
+									</div>
+
+									<div class="present-footer">
+										<p class="present-footer__text">
+											*Необходимо установить программу&nbsp;
+											<a href="https://anydesk.com/ru" target="_blank" rel="noopener" class="present-footer__link"
+												title="Скачать с сайта">Anydesk</a>
+										</p>
+									</div>
+
+								</div>
+								<!--/  Block-present -->
+
+							</div>
+
+							<button class="previous" title="Назад">
+								<img src="./image/icons/previous.svg" alt="Предыдущий">
+							</button>
+
+						</div>
+					</div>
+					<!-- /quiz-main -->
+				</div>
+				<!-- / quiz-4-->
 			</div>
-			<!-- / quiz-1 -->
-
-			<!-- quiz-2ab-->
-			<div class="quiz-2ab quiz">
-				<!-- quiz-header -->
-				<div class="quiz-header">
-
-					<h2 class="quiz-header__title quiz-header__title_top">
-						Какой компьютер вам нужен?
-					</h2>
-
-					<div class="quiz-header__step">
-
-						<div class="step-number">
-							<span class="step-number__first">2</span>
-							<span class="step-number__second">/4</span>
-						</div>
-						<p class="step-text">шаг</p>
-
-					</div>
-				</div>
-				<!-- /quiz-header -->
-
-				<!-- quiz-main -->
-				<div class="quiz-main">
-					<div class="quiz-main-wrapper quiz-main-wrapper_top">
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/top.png" alt="Мощный игровой компьютер" class="item-content__img">
-								<p class="item-content__text">Мощный компьютер для&nbsp;игр,
-									работы с&nbsp;3D-графикой</p>
-							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/middle.png" alt="Компьютер средний производительности" class="item-content__img">
-								<p class="item-content__text">Для работы, учёбы,
-									нетребовательных&nbsp;игр</p>
-							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/elementary.png" alt="Компьютер начального уровня" class="item-content__img">
-								<p class="item-content__text">Для сёрфинга в&nbsp;интернете,
-									решения офисных задач</p>
-							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
-
-						<button class="previous" title="Назад">
-							<img src="./image/icons/previous.svg" alt="Предыдущий">
-						</button>
-						<button class="next" title="Далее">
-							<img src="./image/icons/next.svg" alt="Следующий">
-						</button>
-					</div>
-				</div>
-				<!-- /quiz-main -->
-			</div>
-			<!-- / quiz-2ab-->
-
-			<!-- quiz-2c-->
-			<div class="quiz-2c quiz">
-				<!-- quiz-header -->
-				<div class="quiz-header">
-
-					<h2 class="quiz-header__title quiz-header__title_top">
-						Что вы хотите улучшить?
-					</h2>
-
-					<div class="quiz-header__step">
-
-						<div class="step-number">
-							<span class="step-number__first">2</span>
-							<span class="step-number__second">/4</span>
-						</div>
-						<p class="step-text">шаг</p>
-
-					</div>
-				</div>
-				<!-- /quiz-header -->
-
-				<!-- quiz-main -->
-				<div class="quiz-main">
-					<div class="quiz-main-wrapper quiz-main-wrapper_top quiz-main-wrapper_justify">
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/pc.png" alt="Персональный компьютер" class="item-content__img">
-								<p class="item-content__text">Стационарный персональный&nbsp;
-									компьютер</p>
-							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
-						<div class="quiz-main__item">
-							<div class="item-content">
-								<img src="./image/quiz/laptop.png" alt="Ноутбук" class="item-content__img">
-								<p class="item-content__text">Ноутбук</p>
-							</div>
-							<button class="btn-choice">Выбрать</button>
-						</div>
-
-						<button class="previous" title="Назад">
-							<img src="./image/icons/previous.svg" alt="Предыдущий">
-						</button>
-						<button class="next" title="Далее">
-							<img src="./image/icons/next.svg" alt="Следующий">
-						</button>
-					</div>
-				</div>
-				<!-- /quiz-main -->
-			</div>
-			<!-- / quiz-2c-->
-
-			<!-- quiz-3a-->
-			<div class="quiz-3a quiz">
-
-				<!-- quiz-header -->
-				<div class="quiz-header">
-
-					<h2 class="quiz-header__title quiz-header__title_top">
-						Ваш примерный бюджет на&nbsp;покупку:
-					</h2>
-
-					<div class="quiz-header__step">
-
-						<div class="step-number">
-							<span class="step-number__first">3</span>
-							<span class="step-number__second">/4</span>
-						</div>
-						<p class="step-text">шаг</p>
-
-					</div>
-				</div>
-				<!-- /quiz-header -->
-
-				<!-- quiz-main -->
-				<div class="quiz-main">
-					<div class="main-wrapper">
-
-						<div class="main-item main-item_order">
-
-							<!-- item-list-budget -->
-							<ul class="item-list-budget">
-
-								<li class="budget-row">
-									<span class="budget-row__text">До 30 000 руб.</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-								<li class="budget-row">
-									<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-								<li class="budget-row">
-									<span class="budget-row__text">От 60 000 руб. и более</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-							</ul>
-							<!-- / item-list-budget -->
-
-						</div>
-
-						<div class="main-item">
-
-							<img src="./image/quiz/budget_assembly.png" alt="Сборка из комплектующих" class="main-item__img">
-
-						</div>
-
-						<button class="previous" title="Назад">
-							<img src="./image/icons/previous.svg" alt="Предыдущий">
-						</button>
-						<button class="next" title="Далее">
-							<img src="./image/icons/next.svg" alt="Следующий">
-						</button>
-					</div>
-				</div>
-				<!-- /quiz-main -->
-			</div>
-			<!-- / quiz-3a-->
-
-			<!-- quiz-3b-->
-			<div class="quiz-3b quiz">
-
-				<!-- quiz-header -->
-				<div class="quiz-header">
-
-					<h2 class="quiz-header__title quiz-header__title_top">
-						Ваш примерный бюджет на&nbsp;покупку:
-					</h2>
-
-					<div class="quiz-header__step">
-
-						<div class="step-number">
-							<span class="step-number__first">3</span>
-							<span class="step-number__second">/4</span>
-						</div>
-						<p class="step-text">шаг</p>
-
-					</div>
-				</div>
-				<!-- /quiz-header -->
-
-				<!-- quiz-main -->
-				<div class="quiz-main">
-					<div class="main-wrapper">
-
-						<div class="main-item main-item_order">
-
-							<!-- item-list-budget -->
-							<ul class="item-list-budget">
-
-								<li class="budget-row">
-									<span class="budget-row__text">До 30 000 руб.</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-								<li class="budget-row">
-									<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-								<li class="budget-row">
-									<span class="budget-row__text">От 60 000 руб. и более</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-							</ul>
-							<!-- / item-list-budget -->
-
-						</div>
-
-						<div class="main-item">
-
-							<img src="./image/quiz/budget_choicepc.png" alt="Выбор компьютера" class="main-item__img">
-
-						</div>
-
-						<button class="previous" title="Назад">
-							<img src="./image/icons/previous.svg" alt="Предыдущий">
-						</button>
-						<button class="next" title="Далее">
-							<img src="./image/icons/next.svg" alt="Следующий">
-						</button>
-					</div>
-				</div>
-				<!-- /quiz-main -->
-			</div>
-			<!-- / quiz-3b-->
-
-			<!-- quiz-3с-->
-			<div class="quiz-3с quiz">
-
-				<!-- quiz-header -->
-				<div class="quiz-header">
-
-					<h2 class="quiz-header__title quiz-header__title_top">
-						Ваш примерный бюджет на&nbsp;покупку:
-					</h2>
-
-					<div class="quiz-header__step">
-
-						<div class="step-number">
-							<span class="step-number__first">3</span>
-							<span class="step-number__second">/4</span>
-						</div>
-						<p class="step-text">шаг</p>
-
-					</div>
-				</div>
-				<!-- /quiz-header -->
-
-				<!-- quiz-main -->
-				<div class="quiz-main">
-					<div class="main-wrapper">
-
-						<div class="main-item main-item_order">
-
-							<!-- item-list-budget -->
-							<ul class="item-list-budget">
-
-								<li class="budget-row">
-									<span class="budget-row__text">До 5 000 руб.</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-								<li class="budget-row">
-									<span class="budget-row__text">От 8 000 до 20 000 руб.</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-								<li class="budget-row">
-									<span class="budget-row__text">От 25 000 руб. и более</span>
-									<button class="btn-choice budget-row__btn">Выбрать</button>
-								</li>
-							</ul>
-							<!-- / item-list-budget -->
-
-						</div>
-
-						<div class="main-item">
-
-							<img src="./image/quiz/budget_upgrade.png" alt="Улучшение компьютера" class="main-item__img">
-
-						</div>
-
-						<button class="previous" title="Назад">
-							<img src="./image/icons/previous.svg" alt="Предыдущий">
-						</button>
-						<button class="next" title="Далее">
-							<img src="./image/icons/next.svg" alt="Следующий">
-						</button>
-					</div>
-				</div>
-				<!-- /quiz-main -->
-			</div>
-			<!-- / quiz-3с-->
-
-			<!-- quiz-3a-->
-			<div class="quiz-4 quiz">
-
-				<!-- quiz-header -->
-				<div class="quiz-header">
-
-					<h2 class="quiz-header__title quiz-header__title_top">
-						Спасибо! Оставьте ваши контактные данные,
-						чтобы&nbsp;узнать цену и&nbsp;сроки
-					</h2>
-
-					<div class="quiz-header__step">
-
-						<div class="step-number">
-							<span class="step-number__first">4</span>
-							<span class="step-number__second">/4</span>
-						</div>
-						<p class="step-text">шаг</p>
-
-					</div>
-				</div>
-				<!-- /quiz-header -->
-
-				<!-- quiz-main -->
-				<div class="quiz-main">
-					<div class="main-wrapper">
-
-						<div class="main-item">
-
-						</div>
-
-						<div class="main-item">
-
-						</div>
-
-						<button class="previous" title="Назад">
-							<img src="./image/icons/previous.svg" alt="Предыдущий">
-						</button>
-
-					</div>
-				</div>
-				<!-- /quiz-main -->
-			</div>
-			<!-- / quiz-4-->
+			<!-- / Quiz wrapper -->
 
 		</div>
 		<!-- / Quiz-container -->
 
+		<!-- Quiz popup message -->
+		<div class="popup-quiz">
+			<div class="popup-quiz-wrapper">
+
+				<div class="quiz-message">
+
+					<span class="message-close"></span>
+
+					<div class="quiz-message__content">
+						<h3 class="quiz-message__title">Сообщение отправлено!</h3>
+						<p class="quiz-message__text">Мы свяжемся с&nbsp;вами в&nbsp;течение
+							дня, чтобы рассказать
+							о&nbsp;ценах и&nbsp;сроках</p>
+						<img src="./image/icons/success.svg" alt="Успешно отправлено!" class="quiz-message__img">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- / Quiz popup message -->
+
 	</div>
+	<!-- / quiz-section -->
+
+
+
 </body>
 
 </html>
