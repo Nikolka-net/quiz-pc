@@ -603,7 +603,24 @@ body {
   }
 }
 
-.btn-choice {
+/* btnChoiceGroup label */
+.btnChoiceGroup {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input-radio-choice {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.label-choice {
   display: block;
   background-color: var(--button-color);
   -webkit-border-radius: 8px;
@@ -614,30 +631,36 @@ body {
   padding: 12px 38px;
   text-align: center;
   color: var(--white-color);
+  cursor: pointer;
   -webkit-transition: background-color 0.2s ease-in;
   -o-transition: background-color 0.2s ease-in;
   transition: background-color 0.2s ease-in;
 }
 
 @media (max-width: 705px) {
-  .btn-choice {
+  .label-choice {
     margin-top: 20px;
     font-size: 18px;
   }
 }
 
 @media (max-width: 400px) {
-  .btn-choice {
+  .label-choice {
     padding: 10px 28px;
   }
 }
 
-.btn-choice:hover,
-.btn-choice:active,
-.btn-choice:focus {
+.label-choice:hover,
+.label-choice:active,
+.label-choice:focus {
   background-color: var(--button-color-hover);
 }
 
+.input-radio-choice:checked ~ .label-choice {
+  background-color: var(--button-color-hover);
+}
+
+/* / btnChoiceGroup label */
 .next {
   right: 18px;
 }
@@ -1010,7 +1033,7 @@ body {
   }
 }
 
-.form {
+.formQuiz {
   color: #fff;
 }
 
@@ -1091,12 +1114,34 @@ body {
   color: var(--field-color);
 }
 
+.form__button:hover,
+.form__button:active,
+.form__button:focus {
+  background-color: var(--button-color-hover);
+}
+
 .form__button {
-  cursor: pointer;
+  display: block;
+  background-color: var(--button-color);
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  font-family: 'Montserrat';
   font-weight: 500;
   font-size: 16px;
   padding: 12px 30px;
   margin-top: 8px;
+  text-align: center;
+  color: var(--white-color);
+  -webkit-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .form__button {
+    padding: 10px 28px;
+  }
 }
 
 @media (max-width: 360px) {

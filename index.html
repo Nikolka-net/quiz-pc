@@ -50,7 +50,15 @@
 									<img src="./image/quiz/assembly.png" alt="Сборка из комплектующих" class="item-content__img">
 									<p class="item-content__text">Сборка пк из&nbsp;комплектующих</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice1" name="choice" checked
+										data-btn-quiz="2ab">
+									<label for="btnChoice1" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 							<div class="quiz-main__item">
 								<div class="item-content">
@@ -58,7 +66,14 @@
 									<p class="item-content__text">Выбор нового или&nbsp;б/у пк,
 										ноутбука</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice2" name="choice" data-btn-quiz="2ab">
+									<label for="btnChoice2" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 							<div class="quiz-main__item">
 								<div class="item-content">
@@ -66,10 +81,17 @@
 									<p class="item-content__text">Улучшение, модернизация
 										компьютера</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice3" name="choice" data-btn-quiz="2c">
+									<label for="btnChoice3" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 
-							<button class="next">
+							<button class="next" data-quiz="1">
 								<img src="./image/icons/next.svg" alt="Следующий">
 							</button>
 						</div>
@@ -108,7 +130,15 @@
 									<p class="item-content__text">Мощный компьютер для&nbsp;игр,
 										работы с&nbsp;3D-графикой</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice4" name="choice" checked
+										data-btn-quiz="3a">
+									<label for="btnChoice4" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 							<div class="quiz-main__item">
 								<div class="item-content">
@@ -117,7 +147,14 @@
 									<p class="item-content__text">Для работы, учёбы,
 										нетребовательных&nbsp;игр</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice5" name="choice" data-btn-quiz="3a">
+									<label for="btnChoice5" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 							<div class="quiz-main__item">
 								<div class="item-content">
@@ -125,13 +162,20 @@
 									<p class="item-content__text">Для сёрфинга в&nbsp;интернете,
 										решения офисных задач</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice6" name="choice" data-btn-quiz="3a">
+									<label for="btnChoice6" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 
 							<button class="previous" title="Назад">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
-							<button class="next" title="Далее">
+							<button class="next" title="Далее" data-quiz="2ab">
 								<img src="./image/icons/next.svg" alt="Следующий">
 							</button>
 						</div>
@@ -170,20 +214,35 @@
 									<p class="item-content__text">Стационарный персональный&nbsp;
 										компьютер</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice7" name="choice" checked
+										data-btn-quiz="3c">
+									<label for="btnChoice7" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 							<div class="quiz-main__item">
 								<div class="item-content">
 									<img src="./image/quiz/laptop.png" alt="Ноутбук" class="item-content__img">
 									<p class="item-content__text">Ноутбук</p>
 								</div>
-								<button class="btn-choice">Выбрать</button>
+
+								<div class="btnChoiceGroup">
+									<input type="radio" class="input-radio-choice" id="btnChoice8" name="choice" data-btn-quiz="3c">
+									<label for="btnChoice8" class="label-choice">
+										Выбрать
+									</label>
+								</div>
+
 							</div>
 
 							<button class="previous" title="Назад">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
-							<button class="next" title="Далее">
+							<button class="next" title="Далее" data-quiz="2c">
 								<img src="./image/icons/next.svg" alt="Следующий">
 							</button>
 						</div>
@@ -225,15 +284,37 @@
 
 									<li class="budget-row">
 										<span class="budget-row__text">До 30 000 руб.</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice9" name="choice" checked
+												data-btn-quiz="4">
+											<label for="btnChoice9" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 									<li class="budget-row">
 										<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice10" name="choice" data-btn-quiz="4">
+											<label for="btnChoice10" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 									<li class="budget-row">
 										<span class="budget-row__text">От 60 000 руб. и более</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice11" name="choice" data-btn-quiz="4">
+											<label for="btnChoice11" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 								</ul>
 								<!-- / item-list-budget -->
@@ -249,7 +330,7 @@
 							<button class="previous" title="Назад">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
-							<button class="next" title="Далее">
+							<button class="next" title="Далее" data-quiz="3a">
 								<img src="./image/icons/next.svg" alt="Следующий">
 							</button>
 						</div>
@@ -291,15 +372,37 @@
 
 									<li class="budget-row">
 										<span class="budget-row__text">До 30 000 руб.</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice12" name="choice" checked
+												data-btn-quiz="4">
+											<label for="btnChoice12" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 									<li class="budget-row">
 										<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice13" name="choice" data-btn-quiz="4">
+											<label for="btnChoice13" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 									<li class="budget-row">
 										<span class="budget-row__text">От 60 000 руб. и более</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice14" name="choice" data-btn-quiz="4">
+											<label for="btnChoice14" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 								</ul>
 								<!-- / item-list-budget -->
@@ -315,7 +418,7 @@
 							<button class="previous" title="Назад">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
-							<button class="next" title="Далее">
+							<button class="next" title="Далее" data-quiz="3b">
 								<img src="./image/icons/next.svg" alt="Следующий">
 							</button>
 						</div>
@@ -357,15 +460,37 @@
 
 									<li class="budget-row">
 										<span class="budget-row__text">До 5 000 руб.</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice15" name="choice" checked
+												data-btn-quiz="4">
+											<label for="btnChoice15" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 									<li class="budget-row">
 										<span class="budget-row__text">От 8 000 до 20 000 руб.</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice16" name="choice" data-btn-quiz="4">
+											<label for="btnChoice16" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 									<li class="budget-row">
 										<span class="budget-row__text">От 25 000 руб. и более</span>
-										<button class="btn-choice budget-row__btn">Выбрать</button>
+
+										<div class="btnChoiceGroup">
+											<input type="radio" class="input-radio-choice" id="btnChoice17" name="choice" data-btn-quiz="4">
+											<label for="btnChoice17" class="label-choice budget-row__btn">
+												Выбрать
+											</label>
+										</div>
+
 									</li>
 								</ul>
 								<!-- / item-list-budget -->
@@ -381,7 +506,7 @@
 							<button class="previous" title="Назад">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
-							<button class="next" title="Далее">
+							<button class="next" title="Далее" data-quiz="3c">
 								<img src="./image/icons/next.svg" alt="Следующий">
 							</button>
 						</div>
@@ -419,7 +544,7 @@
 
 							<div class="item-block">
 								<!-- Form -->
-								<form action="#" class="form">
+								<form action="#" class="formQuiz">
 
 									<fieldset class="fieldset">
 
@@ -447,7 +572,7 @@
 												placeholder="mail@example.com" maxlength="80">
 										</div>
 
-										<button type="submit" class="btn-choice form__button">Узнать цену и&nbsp;сроки</button>
+										<button type="submit" class="form__button">Узнать цену и&nbsp;сроки</button>
 
 										<div class="fieldset__item">
 											<label for="formAgreement" class="form__label-checkbox">
@@ -540,7 +665,7 @@
 	<!-- / quiz-section -->
 
 
-
+	<script src="./js/main.js"></script>
 </body>
 
 </html>
