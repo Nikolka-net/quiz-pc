@@ -415,6 +415,7 @@ body {
   font-family: 'Montserrat';
   padding: 30px 85px 58px;
   width: 100%;
+  min-height: 470px;
   -webkit-border-radius: 0 0 20px 20px;
           border-radius: 0 0 20px 20px;
   background-color: var(--quiz-main-bg);
@@ -429,6 +430,7 @@ body {
 @media (max-width: 1075px) {
   .quiz-main {
     padding: 30px 55px 58px;
+    min-height: unset;
   }
 }
 

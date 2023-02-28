@@ -45,45 +45,46 @@
 					<div class="quiz-main">
 						<h3 class="quiz-main__title">Выберите ваш вариант:</h3>
 						<div class="quiz-main-wrapper">
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/assembly.png" alt="Сборка из комплектующих" class="item-content__img">
-									<p class="item-content__text">Сборка пк из&nbsp;комплектующих</p>
+									<p class="item-content__text textToSend">Сборка пк из&nbsp;комплектующих</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice1" name="choice" checked
-										data-btn-quiz="2ab">
+									<input type="radio" class="input-radio-choice" id="btnChoice1" name="service" data-btn-quiz="2ab"
+										data-throughone-quiz="3a">
 									<label for="btnChoice1" class="label-choice">
 										Выбрать
 									</label>
 								</div>
 
 							</div>
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/choicepc.png" alt="Выбор компьютера" class="item-content__img">
-									<p class="item-content__text">Выбор нового или&nbsp;б/у пк,
+									<p class="item-content__text textToSend">Выбор нового или&nbsp;б/у пк,
 										ноутбука</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice2" name="choice" data-btn-quiz="2ab">
+									<input type="radio" class="input-radio-choice" id="btnChoice2" name="service" data-btn-quiz="2ab"
+										data-throughone-quiz="3b">
 									<label for="btnChoice2" class="label-choice">
 										Выбрать
 									</label>
 								</div>
 
 							</div>
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/upgrade.png" alt="Улучшение компьютера" class="item-content__img">
-									<p class="item-content__text">Улучшение, модернизация
+									<p class="item-content__text textToSend">Улучшение, модернизация
 										компьютера</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice3" name="choice" data-btn-quiz="2c">
+									<input type="radio" class="input-radio-choice" id="btnChoice3" name="service" data-btn-quiz="2c">
 									<label for="btnChoice3" class="label-choice">
 										Выбрать
 									</label>
@@ -124,47 +125,46 @@
 					<!-- quiz-main -->
 					<div class="quiz-main">
 						<div class="quiz-main-wrapper quiz-main-wrapper_top">
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/top.png" alt="Мощный игровой компьютер" class="item-content__img">
-									<p class="item-content__text">Мощный компьютер для&nbsp;игр,
+									<p class="item-content__text textToSend">Мощный компьютер для&nbsp;игр,
 										работы с&nbsp;3D-графикой</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice4" name="choice" checked
-										data-btn-quiz="3a">
+									<input type="radio" class="input-radio-choice" id="btnChoice4" name="assemblyBuy" data-btn-quiz="3a">
 									<label for="btnChoice4" class="label-choice">
 										Выбрать
 									</label>
 								</div>
 
 							</div>
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/middle.png" alt="Компьютер средний производительности"
 										class="item-content__img">
-									<p class="item-content__text">Для работы, учёбы,
+									<p class="item-content__text textToSend">Для работы, учёбы,
 										нетребовательных&nbsp;игр</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice5" name="choice" data-btn-quiz="3a">
+									<input type="radio" class="input-radio-choice" id="btnChoice5" name="assemblyBuy" data-btn-quiz="3a">
 									<label for="btnChoice5" class="label-choice">
 										Выбрать
 									</label>
 								</div>
 
 							</div>
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/elementary.png" alt="Компьютер начального уровня" class="item-content__img">
-									<p class="item-content__text">Для сёрфинга в&nbsp;интернете,
+									<p class="item-content__text textToSend">Для сёрфинга в&nbsp;интернете,
 										решения офисных задач</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice6" name="choice" data-btn-quiz="3a">
+									<input type="radio" class="input-radio-choice" id="btnChoice6" name="assemblyBuy" data-btn-quiz="3a">
 									<label for="btnChoice6" class="label-choice">
 										Выбрать
 									</label>
@@ -172,7 +172,7 @@
 
 							</div>
 
-							<button class="previous" title="Назад">
+							<button class="previous" title="Назад" data-quiz="2ab">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
 							<button class="next" title="Далее" data-quiz="2ab">
@@ -208,30 +208,29 @@
 					<!-- quiz-main -->
 					<div class="quiz-main">
 						<div class="quiz-main-wrapper quiz-main-wrapper_top quiz-main-wrapper_justify">
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/pc.png" alt="Персональный компьютер" class="item-content__img">
-									<p class="item-content__text">Стационарный персональный&nbsp;
+									<p class="item-content__text textToSend">Стационарный персональный&nbsp;
 										компьютер</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice7" name="choice" checked
-										data-btn-quiz="3c">
+									<input type="radio" class="input-radio-choice" id="btnChoice7" name="upgrade" data-btn-quiz="3c">
 									<label for="btnChoice7" class="label-choice">
 										Выбрать
 									</label>
 								</div>
 
 							</div>
-							<div class="quiz-main__item">
+							<div class="quiz-main__item dataToSend">
 								<div class="item-content">
 									<img src="./image/quiz/laptop.png" alt="Ноутбук" class="item-content__img">
-									<p class="item-content__text">Ноутбук</p>
+									<p class="item-content__text textToSend">Ноутбук</p>
 								</div>
 
 								<div class="btnChoiceGroup">
-									<input type="radio" class="input-radio-choice" id="btnChoice8" name="choice" data-btn-quiz="3c">
+									<input type="radio" class="input-radio-choice" id="btnChoice8" name="upgrade" data-btn-quiz="3c">
 									<label for="btnChoice8" class="label-choice">
 										Выбрать
 									</label>
@@ -239,7 +238,7 @@
 
 							</div>
 
-							<button class="previous" title="Назад">
+							<button class="previous" title="Назад" data-quiz="2c">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
 							<button class="next" title="Далее" data-quiz="2c">
@@ -252,7 +251,7 @@
 				<!-- / quiz-2c-->
 
 				<!-- quiz-3a-->
-				<div class="quiz-3a quiz" data-step="3a">
+				<div class="quiz-3a quiz" data-step="3a"> dataToSend
 
 					<!-- quiz-header -->
 					<div class="quiz-header">
@@ -282,11 +281,11 @@
 								<!-- item-list-budget -->
 								<ul class="item-list-budget">
 
-									<li class="budget-row">
-										<span class="budget-row__text">До 30 000 руб.</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">До 30 000 руб.</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice9" name="choice" checked
+											<input type="radio" class="input-radio-choice" id="btnChoice9" name="assemblyBudget"
 												data-btn-quiz="4">
 											<label for="btnChoice9" class="label-choice budget-row__btn">
 												Выбрать
@@ -294,22 +293,24 @@
 										</div>
 
 									</li>
-									<li class="budget-row">
-										<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">От 35 000 до 55 000 руб.</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice10" name="choice" data-btn-quiz="4">
+											<input type="radio" class="input-radio-choice" id="btnChoice10" name="assemblyBudget"
+												data-btn-quiz="4">
 											<label for="btnChoice10" class="label-choice budget-row__btn">
 												Выбрать
 											</label>
 										</div>
 
 									</li>
-									<li class="budget-row">
-										<span class="budget-row__text">От 60 000 руб. и более</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">От 60 000 руб. и более</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice11" name="choice" data-btn-quiz="4">
+											<input type="radio" class="input-radio-choice" id="btnChoice11" name="assemblyBudget"
+												data-btn-quiz="4">
 											<label for="btnChoice11" class="label-choice budget-row__btn">
 												Выбрать
 											</label>
@@ -327,7 +328,7 @@
 
 							</div>
 
-							<button class="previous" title="Назад">
+							<button class="previous" title="Назад" data-quiz="3a">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
 							<button class="next" title="Далее" data-quiz="3a">
@@ -370,11 +371,11 @@
 								<!-- item-list-budget -->
 								<ul class="item-list-budget">
 
-									<li class="budget-row">
-										<span class="budget-row__text">До 30 000 руб.</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">До 30 000 руб.</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice12" name="choice" checked
+											<input type="radio" class="input-radio-choice" id="btnChoice12" name="buyBudget"
 												data-btn-quiz="4">
 											<label for="btnChoice12" class="label-choice budget-row__btn">
 												Выбрать
@@ -382,22 +383,24 @@
 										</div>
 
 									</li>
-									<li class="budget-row">
-										<span class="budget-row__text">От 35 000 до 55 000 руб.</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">От 35 000 до 55 000 руб.</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice13" name="choice" data-btn-quiz="4">
+											<input type="radio" class="input-radio-choice" id="btnChoice13" name="buyBudget"
+												data-btn-quiz="4">
 											<label for="btnChoice13" class="label-choice budget-row__btn">
 												Выбрать
 											</label>
 										</div>
 
 									</li>
-									<li class="budget-row">
-										<span class="budget-row__text">От 60 000 руб. и более</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">От 60 000 руб. и более</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice14" name="choice" data-btn-quiz="4">
+											<input type="radio" class="input-radio-choice" id="btnChoice14" name="buyBudget"
+												data-btn-quiz="4">
 											<label for="btnChoice14" class="label-choice budget-row__btn">
 												Выбрать
 											</label>
@@ -415,7 +418,7 @@
 
 							</div>
 
-							<button class="previous" title="Назад">
+							<button class="previous" title="Назад" data-quiz="3b">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
 							<button class="next" title="Далее" data-quiz="3b">
@@ -458,11 +461,11 @@
 								<!-- item-list-budget -->
 								<ul class="item-list-budget">
 
-									<li class="budget-row">
-										<span class="budget-row__text">До 5 000 руб.</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">До 5 000 руб.</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice15" name="choice" checked
+											<input type="radio" class="input-radio-choice" id="btnChoice15" name="upgradeBudget"
 												data-btn-quiz="4">
 											<label for="btnChoice15" class="label-choice budget-row__btn">
 												Выбрать
@@ -470,22 +473,24 @@
 										</div>
 
 									</li>
-									<li class="budget-row">
-										<span class="budget-row__text">От 8 000 до 20 000 руб.</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">От 8 000 до 20 000 руб.</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice16" name="choice" data-btn-quiz="4">
+											<input type="radio" class="input-radio-choice" id="btnChoice16" name="upgradeBudget"
+												data-btn-quiz="4">
 											<label for="btnChoice16" class="label-choice budget-row__btn">
 												Выбрать
 											</label>
 										</div>
 
 									</li>
-									<li class="budget-row">
-										<span class="budget-row__text">От 25 000 руб. и более</span>
+									<li class="budget-row dataToSend">
+										<span class="budget-row__text textToSend">От 25 000 руб. и более</span>
 
 										<div class="btnChoiceGroup">
-											<input type="radio" class="input-radio-choice" id="btnChoice17" name="choice" data-btn-quiz="4">
+											<input type="radio" class="input-radio-choice" id="btnChoice17" name="upgradeBudget"
+												data-btn-quiz="4">
 											<label for="btnChoice17" class="label-choice budget-row__btn">
 												Выбрать
 											</label>
@@ -503,7 +508,7 @@
 
 							</div>
 
-							<button class="previous" title="Назад">
+							<button class="previous" title="Назад" data-quiz="3c">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
 							<button class="next" title="Далее" data-quiz="3c">
@@ -625,7 +630,7 @@
 
 							</div>
 
-							<button class="previous" title="Назад">
+							<button class="previous" title="Назад" data-quiz="4">
 								<img src="./image/icons/previous.svg" alt="Предыдущий">
 							</button>
 
