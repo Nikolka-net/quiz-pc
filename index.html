@@ -25,8 +25,7 @@
 
 						<h2 class="quiz-header__title">
 							Ответьте на&nbsp;несколько вопросов, чтобы узнать
-							примерную цену и&nbsp;сроки на&nbsp;сборку, покупку или&nbsp;улучшение
-							компьютера. Получите удалённую диагностику пк в&nbsp;подарок
+							примерную цену и&nbsp;сроки выполнения работы. Получите удалённую диагностику пк в&nbsp;подарок
 						</h2>
 
 						<div class="quiz-header__step">
@@ -577,7 +576,8 @@
 												placeholder="mail@example.com" maxlength="80">
 										</div>
 
-										<button type="submit" class="form__button">Узнать цену и&nbsp;сроки</button>
+										<button class="formQuiz__button">Узнать цену и&nbsp;сроки</button>
+										<!-- <button type="submit" class="formQuiz__button">Узнать цену и&nbsp;сроки</button> -->
 
 										<div class="fieldset__item">
 											<label for="formAgreement" class="form__label-checkbox">
@@ -653,18 +653,19 @@
 
 					<span class="message-close"></span>
 
-					<div class="quiz-message__content">
-						<h3 class="quiz-message__title">Сообщение отправлено!</h3>
-						<p class="quiz-message__text">Мы свяжемся с&nbsp;вами в&nbsp;течение
-							дня, чтобы рассказать
-							о&nbsp;ценах и&nbsp;сроках</p>
-						<img src="./image/icons/success.svg" alt="Успешно отправлено!" class="quiz-message__img">
-					</div>
-
 				</div>
 			</div>
 		</div>
 		<!-- / Quiz popup message -->
+
+		<!-- Popup warning -->
+
+		<div id="modalWarn" class="popupWarn">
+			<div class="warn">
+				<span class="warn__text"></span>
+			</div>
+		</div>
+		<!-- / Popup warning -->
 
 	</div>
 	<!-- / quiz-section -->
