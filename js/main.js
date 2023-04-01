@@ -197,14 +197,14 @@ function sendFormMessage(elem) {
 	openPopup(popupQuiz);
 
 
-	setTimeout(function () {
+	// setTimeout(function () {
 
-		// Чтобы не сработало 2 раз, при нажатии на крестик
-		if (popupQuiz.classList.contains('open')) {
-			closePopup(popupQuiz);
+	// 	// Чтобы не сработало 2 раз, при нажатии на крестик
+	// 	if (popupQuiz.classList.contains('open')) {
+	// 		closePopup(popupQuiz);
 
-		}
-	}, 4000);
+	// 	}
+	// }, 4000);
 }
 
 // Закрываем окно об отправке
@@ -318,7 +318,7 @@ nextBtn.forEach((itemNext) => {
 
 
 
-btnQuiz.addEventListener('click', () => {
-
+btnQuiz.addEventListener('click', (event) => {
+	event.preventDefault();
 	sendFormMessage('success');
 });
