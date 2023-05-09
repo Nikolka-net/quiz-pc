@@ -16,6 +16,10 @@ const warnText = document.querySelector('.warn__text');
 const btnQuiz = document.querySelector('.formQuiz__button');
 
 
+// Форма, её элементы
+const formQuiz = document.querySelector('.formQuiz');
+const formPhone = document.getElementById('formPhone');
+
 // Сообщение при отправке формы
 const popupQuiz = document.querySelector('.popup-quiz');
 const quizMessage = document.querySelector('.quiz-message');
@@ -25,6 +29,12 @@ const quizMessageImg = document.querySelector('.quiz-message__img');
 
 // Крестик закрытия окна
 const closePopupMessage = document.querySelector('.message-close');
+
+// Чекбокс согласия
+const agreement = document.querySelector('.agreement');
+
+// Input
+const inputChoice = document.querySelectorAll('.input-radio-choice');
 
 /* Данные для отправки на почту*/
 const dataSend = {
@@ -130,6 +140,13 @@ function showMessage(elem) {
 	if (elem === 'option') {
 		warnText.innerText = 'Пожалуйста, выберите ваш вариант!';
 	}
+	if (elem === 'field') {
+		warnText.innerText = 'Заполните обязательные поля';
+	}
+	if (elem === 'empty') {
+		warnText.innerText = 'Пожалуйста, ответьте на вопросы квиза';
+	}
+
 
 	popupWarn.classList.add('open');
 	warn.classList.add(elem);
@@ -196,15 +213,6 @@ function sendFormMessage(elem) {
 	// Октрытие окна
 	openPopup(popupQuiz);
 
-
-	// setTimeout(function () {
-
-	// 	// Чтобы не сработало 2 раз, при нажатии на крестик
-	// 	if (popupQuiz.classList.contains('open')) {
-	// 		closePopup(popupQuiz);
-
-	// 	}
-	// }, 4000);
 }
 
 // Закрываем окно об отправке
@@ -214,7 +222,7 @@ closePopupMessage.addEventListener('click', (e) => {
 
 });
 
-// Очищаем свойства dataSend при возврате назад, чтобы не было путаницы
+// Очищаем свойства dataSend при возврате по слайдам назад, чтобы не было путаницы
 function clearPropObj(dataQuizCurrent) {
 	// В цифру, обрезаем
 	let keyObj = parseInt(dataQuizCurrent.slice(0, 1));
@@ -225,11 +233,220 @@ function clearPropObj(dataQuizCurrent) {
 	}
 }
 
+/* Валидация */
+
+/* Добавл. эл. и родителю класс error */
+function formAddError(input) {
+	if (!input.classList.contains('_error')) {
+		input.classList.add('_error');
+	}
+}
+
+// Удаление класса _error
+function formRemoveError(input) {
+	if (agreement.classList.contains('_error')) { // удал. кр. обводку у чекбокса
+		agreement.classList.remove('_error');
+	}
+
+	if (input.classList.contains('_error')) {
+		input.classList.remove('_error');
+	}
+}
+
+// Проверка на пробелы, табы
+function hasSpace(input) {
+	return /\s/g.test(input);
+}
+
+// Проверка полей перед отправкой
+function formValidate(form) {
+	let error = 0;
+	let formReq = document.querySelectorAll('._req'); // обязат. эл.
+
+	for (let i = 0; i < formReq.length; i++) {
+		const input = formReq[i];
+		formRemoveError(input); // убир. класс error
+
+		if (input.classList.contains('_name')) {
+			// Проверка на пробелы
+			let spaceInput = hasSpace(input.value);
+			if (spaceInput === true) { // если есть пробелы
+				formAddError(input); // добав. класс error
+				error++;
+			}
+		}
+
+		if (input.classList.contains('_phone')) {
+			if (input.value.length < 18) { // если чисел < 18
+				formAddError(input); // добав. класс error
+				error++;
+			}
+		}
+		if (input.classList.contains('_email')) {
+			if (emailTest(input)) { // если проверка не пройдена
+				formAddError(input); // добав. класс error
+				error++;
+			}
+		} else if (input.getAttribute('type') === 'checkbox' && input.checked === false) { // если не включен
+			formAddError(input);
+			agreement.classList.add('_error'); // добавл. чекбоксу обводку красную
+			error++;
+		} else {
+			if (input.value === '') { // если не заполнено поле
+				formAddError(input);
+				error++;
+			}
+		}
+
+	}
+	return error;
+
+}
+
+/* Проверка e-mail */
+function emailTest(input) {
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value); // ?
+}
+
+/* Проверка поля телефона: маска */
+function maskPhone(input, checkOpen, masked = '+7 (___) ___-__-__') {
+
+	function mask(event) {
+		const keyCode = event.keyCode;
+		const template = masked,
+			def = template.replace(/\D/g, ""),
+			val = this.value.replace(/\D/g, "");
+		let i = 0,
+			newValue = template.replace(/[_\d]/g, function (a) {
+				return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+			});
+		i = newValue.indexOf("_");
+		if (i != -1) {
+			newValue = newValue.slice(0, i);
+		}
+		let reg = template.substr(0, this.value.length).replace(/_+/g,
+			function (a) {
+				return "\\d{1," + a.length + "}";
+			}).replace(/[+()]/g, "\\$&");
+		reg = new RegExp("^" + reg + "$");
+		if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+			this.value = newValue;
+		}
+		if (event.type === "blur" && this.value.length < 5) {
+			this.value = "";
+		}
+
+	}
+
+	if (checkOpen === true) { // если слайд виден
+		input.addEventListener("input", mask);
+		input.addEventListener("focus", mask);
+		input.addEventListener("blur", mask);
+
+	} else if (checkOpen === false) {
+		// Удаление прослушки при закрытии слайда
+		input.removeEventListener("input", mask);
+		input.removeEventListener("focus", mask);
+		input.removeEventListener("blur", mask);
+	}
+
+}
+
+/* Очистка объекта */
+function resetDataSend(dataSend) {
+	for (let key in dataSend) {
+		dataSend[key] = '';
+	}
+
+}
+
+// Убираем checked у input
+function clearInputCheck() {
+	inputChoice.forEach((input) => {
+		if (input.checked === true) {
+			input.checked = false;
+
+		}
+	});
+}
+
+
+
+/* Отправка сообщения: функция */
+async function formSend(e) {
+	e.preventDefault();
+	let error = formValidate(formQuiz);
+	let emptyData = false;
+
+	const formData = new FormData(formQuiz); // получ. данные формы
+
+	// Если объект не пустой, запис. данные в formData
+	if (dataSend.step1 !== '' && dataSend.step2 !== '' && dataSend.step3 !== '') {
+		for (let key in dataSend) {
+			formData.append(key, dataSend[key]);
+		}
+	} else {
+		emptyData = true;
+	}
+
+
+
+	// for (let pair of formData.entries()) {
+	// 	console.log(pair[0] + ', ' + pair[1]); //property and value pairs
+	// 	if ((pair[0] === 'step1' || pair[0] === 'step2' || pair[0] === 'step3') && pair[1] !== '') {
+	// 		console.log('not empty');
+	// 	}
+	// }
+
+	if (error === 0) {
+
+		if (emptyData === false) {
+
+			await fetch('./sendmail.php', {
+					method: 'POST',
+					body: formData
+
+				})
+				.then(res => res.json())
+				.then((res) => {
+					formQuiz.reset();
+					resetDataSend(dataSend); // очистка шагов в объекте
+					clearInputCheck(); // сброс checked у активных инпутов
+					sendFormMessage('success'); // отправлено
+
+				})
+				.catch(() => {
+					formQuiz.reset();
+					resetDataSend(dataSend);
+					clearInputCheck();
+					sendFormMessage('wrong'); // не отправлено
+
+				});
+
+		} else if (emptyData === true) {
+			showMessage('empty');
+		}
+
+
+
+	} else {
+		showMessage('field'); // заполните поля
+	}
+
+}
+
+
 // Назад кнопка
 previousBtn.forEach((itemPrevious) => {
 	itemPrevious.addEventListener('click', () => {
 		/* Номер текущего квиза */
 		let dataQuizCurrent = itemPrevious.dataset.quiz;
+
+		// Снимаем маску(прослушку) для поля с телефоном
+		if (parseInt(dataQuizCurrent) === 4) {
+			let checkOpen = false;
+			maskPhone(formPhone, checkOpen);
+		}
 		// очистка объекта при возврате
 		clearPropObj(dataQuizCurrent);
 
@@ -252,11 +469,16 @@ previousBtn.forEach((itemPrevious) => {
 nextBtn.forEach((itemNext) => {
 	itemNext.addEventListener('click', () => {
 
-
 		/* Номер текущего квиза */
 		let dataQuizCurrent = itemNext.dataset.quiz;
 		/* Номер текущего квиза переводим в цифру и обрезаем до 1 эл., чтобы добавить в объект */
 		let currentQuizNumber = parseInt(dataQuizCurrent.slice(0, 1));
+
+		// Запускаем маску для поля с телефоном
+		if (currentQuizNumber === 3) {
+			let checkOpen = true;
+			maskPhone(formPhone, checkOpen);
+		}
 
 		quiz.forEach((itemQuiz) => {
 			let dataStep = itemQuiz.dataset.step;
@@ -318,7 +540,20 @@ nextBtn.forEach((itemNext) => {
 
 
 
-btnQuiz.addEventListener('click', (event) => {
-	event.preventDefault();
-	sendFormMessage('success');
-});
+/* Отправка формы */
+
+formQuiz.addEventListener('submit', formSend);
+
+// btnQuiz.addEventListener('click', (event) => {
+// 	event.preventDefault();
+// 	let error = formValidate(formQuiz);
+// 	clearInputCheck();
+
+// 	if (error === 0) {
+// 		sendFormMessage('success');
+
+// 	} else {
+// 		showMessage('field');
+// 	}
+
+// });

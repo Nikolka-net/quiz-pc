@@ -519,7 +519,7 @@
 				</div>
 				<!-- / quiz-3с-->
 
-				<!-- quiz-3a-->
+				<!-- quiz-4-->
 				<div class="quiz-4 quiz" data-step="4">
 
 					<!-- quiz-header -->
@@ -554,38 +554,38 @@
 
 										<div class="fieldset__item">
 											<label for="formName" class="form__label">
-												Ваше имя
+												Ваше имя <span class="form__label_small">(без пробелов)</span>
 											</label>
-											<input type="text" autocomplete="on" name="userName" id="formName" class="form__text _req"
-												placeholder="Иван" maxlength="60">
+											<input type="text" autocomplete="off" name="userName" id="formName" class="form__text _req _name"
+												placeholder="Иван" maxlength="60" tabindex="1">
 										</div>
 
 										<div class="fieldset__item">
 											<label for="formPhone" class="form__label">
 												Телефон для&nbsp;консультации
 											</label>
-											<input type="tel" autocomplete="on" name="phone" id="formPhone" class="form__text _req _phone"
-												placeholder="+7 (___) ___-__-__" maxlength="18">
+											<input type="tel" autocomplete="off" name="phone" id="formPhone" class="form__text _req _phone"
+												placeholder="+7 (___) ___-__-__" maxlength="18" tabindex="2">
 										</div>
 
 										<div class="fieldset__item">
 											<label for="formEmail" class="form__label">
-												Ваша почта (необязательно)
+												Ваша почта <span class="form__label_small">(необязательно)</span>
 											</label>
-											<input type="email" autocomplete="on" name="email" id="formEmail" class="form__text _email"
-												placeholder="mail@example.com" maxlength="80">
+											<input type="email" autocomplete="off" name="email" id="formEmail" class="form__text _email"
+												placeholder="mail@example.com" maxlength="80" tabindex="3">
 										</div>
 
-										<button class="formQuiz__button">Узнать цену и&nbsp;сроки</button>
-										<!-- <button type="submit" class="formQuiz__button">Узнать цену и&nbsp;сроки</button> -->
+										<!-- <button class="formQuiz__button" tabindex="4">Узнать цену и&nbsp;сроки</button> -->
+										<button type="submit" class="formQuiz__button" tabindex="4">Узнать цену и&nbsp;сроки</button>
 
 										<div class="fieldset__item">
 											<label for="formAgreement" class="form__label-checkbox">
 												<input type="checkbox" class="form__checkbox real-checkbox _req" id="formAgreement" checked
 													name="agreement">
-												<span class="custom-checkbox agreement"></span>
+												<span class="custom-checkbox agreement" tabindex="5"></span>
 												<span>С обработкой
-													<a href="#!" target="_blank" rel="noopener" class="form__link">
+													<a href="#!" target="_blank" rel="noopener" class="form__link" tabindex="6">
 														персональных данных</a>
 													ознакомлен(а)
 												</span>
@@ -621,7 +621,7 @@
 										<p class="present-footer__text">
 											*Необходимо установить программу&nbsp;
 											<a href="https://anydesk.com/ru" target="_blank" rel="noopener" class="present-footer__link"
-												title="Скачать с сайта">Anydesk</a>
+												title="Скачать с&nbsp;официального сайта">Anydesk</a>
 										</p>
 									</div>
 
