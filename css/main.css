@@ -176,8 +176,10 @@ body {
 }
 
 .quiz-wrapper {
-  display: block;
-  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 .quiz.visible {
@@ -189,11 +191,12 @@ body {
 }
 
 .quiz {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

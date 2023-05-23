@@ -60,9 +60,11 @@ body {
 }
 
 .quiz-wrapper {
-	display: block;
+	// display: block;
+	display: grid;
+	grid-template-columns: 1fr;
 
-	position: relative;
+	// position: relative;
 
 }
 
@@ -73,11 +75,14 @@ body {
 }
 
 .quiz {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// right: 0;
+	// bottom: 0;
+
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
 
 	display: flex;
 	flex-direction: column;
