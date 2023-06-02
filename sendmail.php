@@ -9,6 +9,7 @@ require './php/phpmailer/src/PHPMailer.php';
 require './php/phpmailer/src/SMTP.php';
 
 require './config.php'; // запись отдельно токена и адреса crierbot
+require './dip/conf.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -23,7 +24,7 @@ $mail->SMTPAuth = true;
 // Логин или E-mail целиком
 $mail->Username = 'nickolaiivolgin@yandex.ru';
 // Пароль от почтового ящика
-$mail->Password = 'kalina2017';
+$mail->Password = "{$dip}";
 // Протокол соединения
 $mail->SMTPSecure = 'ssl';
 // Порт для исходящаей почты

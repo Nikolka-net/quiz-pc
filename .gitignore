@@ -40,7 +40,10 @@ $RECYCLE.BIN/
 #composer.json
 settings.json
 old/*
-sendmail.php
+dip/*
+main_copy.css
+index_copy.html
+main_copy.scss
 
 
 

@@ -282,6 +282,7 @@ function formValidate(form) {
 				error++;
 			}
 		}
+		// Проверка не используется
 		if (input.classList.contains('_email')) {
 			if (emailTest(input)) { // если проверка не пройдена
 				formAddError(input); // добав. класс error
@@ -450,6 +451,14 @@ previousBtn.forEach((itemPrevious) => {
 		// очистка объекта при возврате
 		clearPropObj(dataQuizCurrent);
 
+		// удаление красной обводки
+		let formReq = document.querySelectorAll('._req'); // обязат. эл.
+
+		for (let i = 0; i < formReq.length; i++) {
+			const input = formReq[i];
+			formRemoveError(input); // убир. класс error
+		}
+
 		// Пока массив с номерами слайдов не пустой
 		if (quizArr.length !== 0) {
 
@@ -543,17 +552,3 @@ nextBtn.forEach((itemNext) => {
 /* Отправка формы */
 
 formQuiz.addEventListener('submit', formSend);
-
-// btnQuiz.addEventListener('click', (event) => {
-// 	event.preventDefault();
-// 	let error = formValidate(formQuiz);
-// 	clearInputCheck();
-
-// 	if (error === 0) {
-// 		sendFormMessage('success');
-
-// 	} else {
-// 		showMessage('field');
-// 	}
-
-// });
